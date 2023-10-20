@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Nombre del Sitio Turístico] - Descubre el Paraíso en la Tierra</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Agrega aquí tus etiquetas meta, enlaces a CSS y otros recursos -->
+</head>
+<body>
+    <header>
+        <h1>A viajar!</h1>
+        <img src="imagenes/turismo-como-empresa.png" alt="Imagen impresionante del sitio turístico">
+    </header>
+
+    <section>
+        <h2>Bienvenido A viajar!</h2>
+        <p>Descubre un lugar de ensueño, un rincón del mundo donde la naturaleza y la cultura se fusionan en una experiencia única. [Nombre del Sitio Turístico] es un destino que te dejará sin aliento.</p>
+    </section>
+
+    <section>
+        <h2>¿Por Qué Elegir ? A viajar!</h2>
+        <ul>
+            <li><strong>Naturaleza Impresionante:</strong> Disfruta de paisajes asombrosos, playas de aguas cristalinas, montañas majestuosas y selvas exuberantes.</li>
+            <li><strong>Cultura Rica:</strong> Sumérgete en la historia y las tradiciones de [Nombre del Sitio Turístico]. Conoce a la gente local y descubre su forma de vida.</li>
+            <li><strong>Aventuras Inolvidables:</strong> Desde el senderismo y el buceo hasta el avistamiento de vida silvestre, aquí hay actividades para todos los gustos.</li>
+            <li><strong>Gastronomía Exquisita:</strong> Prueba platos deliciosos que reflejan la autenticidad de la región.</li>
+            <li><strong>Alojamiento de Calidad:</strong> Descansa en hoteles de primera clase y alojamientos únicos que te harán sentir como en casa.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Nuestros Tours y Actividades</h2>
+        <ul>
+            <li><strong>Tour de Aventura por la Selva:</strong> Descubre la belleza de la selva tropical con un guía experto.</li>
+            <li><strong>Buceo en las Aguas Turquesas:</strong> Explora los arrecifes de coral y maravíllate con la vida submarina.</li>
+            <li><strong>Recorrido Gastronómico:</strong> Prueba los sabores locales en los restaurantes más auténticos.</li>
+            <li><strong>Visita a Monumentos Históricos:</strong> Aprende sobre la historia de A viajar! visitando sus monumentos emblemáticos.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Reserva Tu Viaje Ahora</h2>
+        <p>No pierdas la oportunidad de vivir una experiencia única en [Nombre del Sitio Turístico]. Reserva tu viaje ahora y comienza a planear unas vacaciones inolvidables.</p>
+        <a href="#link-de-reserva" class="boton-reserva">Reservar Ahora</a>
+    </section>
+
+    <section>
+        <h2>¿Por Qué Elegirnos?</h2>
+        <ul>
+            <li><strong>Experiencia y Profesionalismo:</strong> Llevamos años en la industria turística, brindando a nuestros clientes experiencias inolvidables.</li>
+            <li><strong>Atención Personalizada:</strong> Nuestro equipo de expertos en viajes está listo para ayudarte en cada paso del camino.</li>
+            <li><strong>Precios Competitivos:</strong> Ofrecemos paquetes asequibles para que todos puedan disfrutar de [Nombre del Sitio Turístico].</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Testimonios de Clientes Satisfechos</h2>
+        <blockquote>"Mi viaje a A viajar fue una experiencia que nunca olvidaré. Las playas eran impresionantes y la gente local era amable y acogedora. ¡Recomiendo este destino a todos!" - María R.</blockquote>
+    </section>
+    
+
+    <section>
+        <h2>Tu opinion es importante</h2>
+        <form id="contactForm" onsubmit="return validarFormulario()">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+                <span id="nombreError" class="error"></span>
+            </div>
+            <div>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email">
+                <span id="emailError" class="error"></span>
+            </div>
+            <div>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje"></textarea>
+                <span id="mensajeError" class="error"></span>
+            </div>
+            <div>
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    
+
+
+    </section>
+
+    
+    <script>
+        function validarFormulario() {
+            var nombre = document.getElementById("nombre").value;
+            var email = document.getElementById("email").value;
+            var mensaje = document.getElementById("mensaje").value;
+            var nombreError = document.getElementById("nombreError");
+            var emailError = document.getElementById("emailError");
+            var mensajeError = document.getElementById("mensajeError");
+            var valido = true;
+
+            // Validación del nombre
+            if (nombre === "") {
+                nombreError.textContent = "El nombre es obligatorio.";
+                valido = false;
+            } else {
+                nombreError.textContent = "";
+            }
+
+            // Validación del correo electrónico
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (!emailPattern.test(email)) {
+                emailError.textContent = "El correo electrónico no es válido.";
+                valido = false;
+            } else {
+                emailError.textContent = "";
+            }
+
+            // Validación del mensaje
+            if (mensaje === "") {
+                mensajeError.textContent = "El mensaje es obligatorio.";
+                valido = false;
+            } else {
+                mensajeError.textContent = "";
+            }
+
+            return valido;
+        }
+    </script>
+
+    <section>
+        <h2>Ponte en Contacto Con Nosotros</h2>
+        <p>Si tienes alguna pregunta o necesitas más información, no dudes en ponerte en contacto con nuestro equipo. Estamos aquí para ayudarte.</p>
+        <p>Teléfono de Contacto: <a href="tel:+123456789">123-456-789</a></p>
+        <p>Correo Electrónico de Contacto: <a href="mailto:info@sitioturistico.com">info@sitioturistico.com</a></p>
+    </section>
+
+    <section>
+        <h2>Síguenos en Redes Sociales</h2>
+        <!-- Agrega aquí tus enlaces a las redes sociales con los íconos correspondientes -->
+    </section>
+
+    <!-- Agrega aquí tus scripts de JavaScript, si es necesario -->
+
+</body>
+</html>
